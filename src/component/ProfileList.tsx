@@ -29,9 +29,9 @@ const ProfileList = (props: Props) => {
                         <td>{profile.company}</td>
                         <td>
                             <div>
-                                <input type="button" value="View"/>
-                                <input type="button" value="Edit"/>
-                                <input type="button" value="Delete"/>
+                                <input type="button" value="View" />
+                                <input type="button" value="Edit" />
+                                <input type="button" value="Delete" />
                             </div>
                         </td>
                     </tr>

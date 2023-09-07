@@ -13,32 +13,32 @@ const AddProfile = (props: Props) => {
     const [dob, setDOB] = useState("");
     const [exp, setExp] = useState("");
     const [company, setCompany] = useState("");
-    const { OnBackButtonClick, onSubmitClickHandler} = props;
+    const { OnBackButtonClick, onSubmitClickHandler } = props;
 
-    const OnNameChangeHandler = (e: any) =>{
+    const OnNameChangeHandler = (e: any) => {
         setName(e.target.value);
     }
 
-    const OnDOBChangeHandler = (e: any) =>{
+    const OnDOBChangeHandler = (e: any) => {
         setDOB(e.target.value);
     }
 
-    const OnExpChangeHandler = (e: any) =>{
+    const OnExpChangeHandler = (e: any) => {
         setExp(e.target.value);
     }
 
-    const OnCompChangeHandler = (e: any) =>{
+    const OnCompChangeHandler = (e: any) => {
         setCompany(e.target.value);
     }
 
-    const onSubmitbtnClickHandler = (e: any) =>{
+    const onSubmitbtnClickHandler = (e: any) => {
         e.preventDefault();
-        const data: IProfile ={
+        const data: IProfile = {
             id: new Date().toJSON().toString(),
             name: name,
-            dateOfBirth:dob,
-            experience:exp,
-            company:company
+            dateOfBirth: dob,
+            experience: exp,
+            company: company
         }
         onSubmitClickHandler(data)
     }
@@ -51,19 +51,19 @@ const AddProfile = (props: Props) => {
             <form onSubmit={onSubmitbtnClickHandler}>
                 <div>
                     <label> Full Name : </label>
-                    <input type="text" value={name} onChange={OnNameChangeHandler}/>
+                    <input type="text" value={name} onChange={OnNameChangeHandler} />
                 </div>
                 <div>
                     <label>DateOfBirth : </label>
-                    <input type="text" value={dob} onChange={OnDOBChangeHandler}/>
+                    <input type="text" value={dob} onChange={OnDOBChangeHandler} />
                 </div>
                 <div>
                     <label> Experience : </label>
-                    <input type="text" value={exp} onChange={OnExpChangeHandler}/>
+                    <input type="text" value={exp} onChange={OnExpChangeHandler} />
                 </div>
                 <div>
                     <label>Company : </label>
-                    <input type="text" value={company} onChange={OnCompChangeHandler}/>
+                    <input type="text" value={company} onChange={OnCompChangeHandler} />
                 </div>
                 <div>
                     <input type="button" value="Back" onClick={OnBackButtonClick} />
